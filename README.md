@@ -9,7 +9,7 @@
 
 Repository bootstrap only. No WebSocket client, decryptor, spool, health server
 or released version exists yet. Do not use in production.
-Runtime extraction follows in power-platform task 15-07.
+Runtime implementation is planned for a future release.
 
 ## Install and quick start
 
@@ -21,7 +21,7 @@ npm install @ivanvasechko/tuya-message-queue-consumer
 
 There is no working consumer quick start yet. The built entry point intentionally
 exports nothing. ESM-only; CommonJS callers must use dynamic `import()`.
-Requires Node 20 or newer. Local version `0.0.0` is a manifest
+Requires Node 22.12 or newer. Local version `0.0.0` is a manifest
 placeholder only; publishing it is blocked and no placeholder tag is created.
 
 ## Disclaimer and attribution
@@ -52,7 +52,10 @@ npm run check-package
 npm audit
 ```
 
-CI runs Node 20, 22, 24 and 26. Coverage thresholds are 90% for lines, statements,
+CI runs Node 22.12, 22, 24 and 26. Development uses Vitest 5 and TypeScript 6;
+TypeScript 7 is deferred until typescript-eslint supports it. Node type definitions
+track Node 22 to avoid exposing APIs unavailable on the minimum supported runtime.
+Coverage thresholds are 90% for lines, statements,
 functions and branches. Bootstrap coverage does not demonstrate consumer behavior.
 Package checks build and inspect the actual npm file list, run `publint` and
 `@arethetypeswrong/cli` with its `esm-only` profile (CommonJS is not supported).
