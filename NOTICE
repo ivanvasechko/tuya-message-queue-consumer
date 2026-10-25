@@ -1,0 +1,8 @@
+Unofficial. Not affiliated with, endorsed by, or supported by Tuya.
+All trademarks belong to their respective owners.
+
+Thanks to Tuya's MIT-licensed tuya-pulsar-ws-node for the original WebSocket
+client design: https://github.com/tuya/tuya-pulsar-ws-node
+
+No upstream runtime source is included in this bootstrap. When derived client
+or crypto files are added, retain their upstream copyright and licence notices.

@@ -1,0 +1,11 @@
+* text=auto eol=lf
+/.github export-ignore
+/tests export-ignore
+/scripts export-ignore
+/.editorconfig export-ignore
+/.gitignore export-ignore
+/.gitattributes export-ignore
+/eslint.config.js export-ignore
+/vitest.config.ts export-ignore
+/CONTRIBUTING.md export-ignore
+/SECURITY.md export-ignore

@@ -1,0 +1,46 @@
+{
+  "name": "@ivanvasechko/tuya-message-queue-consumer",
+  "version": "0.0.0",
+  "description": "Unofficial Tuya message-queue consumer (bootstrap; no runtime client yet).",
+  "type": "module",
+  "license": "MIT",
+  "author": "Ivan Vasechko (https://github.com/ivanvasechko)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivanvasechko/tuya-message-queue-consumer.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE", "NOTICE", "CHANGELOG.md"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --coverage",
+    "build": "tsc --project tsconfig.build.json",
+    "check-package": "npm run build && node scripts/check-package.mjs && publint && attw --pack --profile esm-only",
+    "prepublishOnly": "node scripts/check-release.mjs",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.5",
+    "@eslint/js": "^10.0.0",
+    "@types/node": "^20.19.0",
+    "@vitest/coverage-v8": "^4.1.12",
+    "eslint": "^10.0.0",
+    "publint": "^0.3.0",
+    "typescript": "^5.9.0",
+    "typescript-eslint": "^8.46.0",
+    "vitest": "^4.1.12"
+  }
+}
