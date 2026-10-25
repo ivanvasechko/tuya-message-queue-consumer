@@ -14,3 +14,8 @@ Semantic Versioning.
 - Made package documentation self-contained.
 - Raised the minimum Node version to 22.12 for Vitest 5; upgraded TypeScript to 6.
 - Updated CI and release actions and grouped future Dependabot updates.
+
+### Fixed
+
+- Prevented Dependabot from proposing unsupported TypeScript versions and Node
+  type-definition majors above the minimum supported runtime.

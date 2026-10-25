@@ -4,6 +4,13 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    ignore:
+      # typescript-eslint currently requires TypeScript <6.1.
+      - dependency-name: typescript
+        versions: ['>=6.1']
+      # Match the minimum supported Node runtime, not the newest Node release.
+      - dependency-name: '@types/node'
+        update-types: ['version-update:semver-major']
     groups:
       development-dependencies:
         patterns: ['*']

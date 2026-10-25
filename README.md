@@ -55,6 +55,9 @@ npm audit
 CI runs Node 22.12, 22, 24 and 26. Development uses Vitest 5 and TypeScript 6;
 TypeScript 7 is deferred until typescript-eslint supports it. Node type definitions
 track Node 22 to avoid exposing APIs unavailable on the minimum supported runtime.
+Dependabot excludes TypeScript 6.1+ until typescript-eslint supports it and excludes
+Node type-definition major upgrades until the minimum runtime changes. Revisit
+these exclusions when upgrading the lint toolchain or minimum Node version.
 Coverage thresholds are 90% for lines, statements,
 functions and branches. Bootstrap coverage does not demonstrate consumer behavior.
 Package checks build and inspect the actual npm file list, run `publint` and
