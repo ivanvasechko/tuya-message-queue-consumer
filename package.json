@@ -19,7 +19,13 @@
       "import": "./dist/index.js"
     }
   },
-  "files": ["dist", "README.md", "LICENSE", "NOTICE", "CHANGELOG.md"],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "NOTICE",
+    "CHANGELOG.md"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -40,7 +46,7 @@
     "eslint": "^10.0.0",
     "publint": "^0.3.0",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.46.0",
+    "typescript-eslint": "^8.72.1",
     "vitest": "^5.0.5"
   }
 }
